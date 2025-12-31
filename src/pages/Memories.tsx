@@ -2,19 +2,33 @@ import { Link } from "react-router-dom";
 import { Heart, ArrowLeft, Play, Image } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Sparkles from "@/components/Sparkles";
-
 const Memories = () => {
-  const galleryItems = [
-    { id: 1, type: "image", placeholder: "Add your first memory photo" },
-    { id: 2, type: "image", placeholder: "Add a special moment" },
-    { id: 3, type: "video", placeholder: "Add a video memory" },
-    { id: 4, type: "image", placeholder: "Add another photo" },
-    { id: 5, type: "image", placeholder: "Capture the love" },
-    { id: 6, type: "video", placeholder: "Add another video" },
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-accent to-background overflow-hidden relative">
+  const galleryItems = [{
+    id: 1,
+    type: "image",
+    placeholder: "Add your first memory photo"
+  }, {
+    id: 2,
+    type: "image",
+    placeholder: "Add a special moment"
+  }, {
+    id: 3,
+    type: "video",
+    placeholder: "Add a video memory"
+  }, {
+    id: 4,
+    type: "image",
+    placeholder: "Add another photo"
+  }, {
+    id: 5,
+    type: "image",
+    placeholder: "Capture the love"
+  }, {
+    id: 6,
+    type: "video",
+    placeholder: "Add another video"
+  }];
+  return <div className="min-h-screen bg-gradient-to-br from-background via-accent to-background overflow-hidden relative">
       <Sparkles />
       
       {/* Navigation */}
@@ -55,16 +69,11 @@ const Memories = () => {
               Our Journey Together
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
-              <p className="text-lg italic">
-                "Write your special message here..."
-              </p>
+              <p className="text-lg italic">"তুমি আমার নীরবতার ভিতরে লুকিয়ে থাকা গান।”"</p>
               <p>
-                Share your thoughts about your journey together. Talk about the highs and lows, 
-                the adventures you've had, and what makes your love unique.
-              </p>
+            </p>
               <p>
-                This is your space to pour your heart out and remind them how much they mean to you.
-              </p>
+            </p>
             </div>
           </div>
         </div>
@@ -75,28 +84,19 @@ const Memories = () => {
             Our Beautiful Memories
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {galleryItems.map((item) => (
-              <div
-                key={item.id}
-                className="group relative bg-card/80 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg border border-primary/20 aspect-square hover:shadow-xl transition-all duration-300 hover:scale-[1.02]"
-              >
+            {galleryItems.map(item => <div key={item.id} className="group relative bg-card/80 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg border border-primary/20 aspect-square hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent-foreground/20 flex flex-col items-center justify-center p-6 text-center">
-                  {item.type === "video" ? (
-                    <div className="w-16 h-16 rounded-full bg-primary/30 flex items-center justify-center mb-4 group-hover:bg-primary/50 transition-colors">
+                  {item.type === "video" ? <div className="w-16 h-16 rounded-full bg-primary/30 flex items-center justify-center mb-4 group-hover:bg-primary/50 transition-colors">
                       <Play className="w-8 h-8 text-primary" />
-                    </div>
-                  ) : (
-                    <div className="w-16 h-16 rounded-full bg-primary/30 flex items-center justify-center mb-4 group-hover:bg-primary/50 transition-colors">
+                    </div> : <div className="w-16 h-16 rounded-full bg-primary/30 flex items-center justify-center mb-4 group-hover:bg-primary/50 transition-colors">
                       <Image className="w-8 h-8 text-primary" />
-                    </div>
-                  )}
+                    </div>}
                   <p className="text-muted-foreground font-medium">{item.placeholder}</p>
                   <p className="text-sm text-muted-foreground/70 mt-2">
                     Replace with your {item.type}
                   </p>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
 
@@ -142,8 +142,6 @@ const Memories = () => {
       {/* Decorative Elements */}
       <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-primary/5 to-transparent" />
       <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-primary/10 to-transparent" />
-    </div>
-  );
+    </div>;
 };
-
 export default Memories;
