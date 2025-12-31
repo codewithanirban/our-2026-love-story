@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Volume2, VolumeX } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import John from "@/assets/free_fallin.mp3";
 
 const BackgroundMusic = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -47,7 +48,7 @@ const BackgroundMusic = () => {
         ref={audioRef}
         loop
         preload="auto"
-        src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+        src={John}
       />
       <Button
         onClick={toggleMusic}
