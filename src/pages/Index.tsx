@@ -67,16 +67,13 @@ Here’s to more adventures, more growth, more healing, and a lifetime of holdin
               </div>
             </div>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
-              <p className="text-lg italic border-l-4 border-accent-foreground pl-4">
-                "Add another beautiful message or poem..."
-              </p>
+              <p className="text-lg italic border-l-4 border-accent-foreground pl-4">"I love you without knowing how, or when, or from where.
+I love you simply, without problems or pride:
+I love you in this way because I do not know any other way of loving.”"</p>
               <p>
-                You can write a poem, share your resolutions together, 
-                or simply express gratitude for having them in your life.
-              </p>
+            </p>
               <p>
-                Make it personal and from the heart. They will love it!
-              </p>
+            </p>
             </div>
           </div>
         </div>
