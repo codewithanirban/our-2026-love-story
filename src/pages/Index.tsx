@@ -2,10 +2,8 @@ import { Link } from "react-router-dom";
 import { Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import FloatingHearts from "@/components/FloatingHearts";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-accent via-background to-accent overflow-hidden relative">
+  return <div className="min-h-screen bg-gradient-to-br from-accent via-background to-accent overflow-hidden relative">
       <FloatingHearts />
       
       {/* Hero Section */}
@@ -42,16 +40,18 @@ const Index = () => {
               </div>
             </div>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
-              <p className="text-lg italic border-l-4 border-primary pl-4">
-                "Write your heartfelt message here..."
-              </p>
+              <p className="text-lg italic border-l-4 border-primary pl-4">"Every storm only proved how deep our roots go. Even when miles tried to pull us apart, our hearts stayed locked—beating for the same dream, the same us. I don’t want distance; I want you here, with me, always. My meow, my forever.
+
+Thank you for loving me when I was difficult, for standing by me when things weren’t easy, and for reminding me what real love looks like—imperfect, fierce, and unconditional.
+
+I choose you. Every day. In every version of us.
+Here’s to more adventures, more growth, more healing, and a lifetime of holding hands through it all.
+
+"</p>
               <p>
-                This is your space to express your feelings. Write about what they mean to you, 
-                your favorite memories from the past year, and your dreams for 2026.
-              </p>
+            </p>
               <p>
-                Replace this text with your personal message filled with love and warmth.
-              </p>
+            </p>
             </div>
           </div>
 
@@ -84,10 +84,7 @@ const Index = () => {
         {/* CTA Button */}
         <div className="text-center animate-bounce-slow">
           <Link to="/memories">
-            <Button 
-              size="lg" 
-              className="bg-primary hover:bg-primary/90 text-primary-foreground px-12 py-6 text-lg rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 group"
-            >
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-12 py-6 text-lg rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 group">
               <Heart className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" fill="currentColor" />
               Explore Our Memories
               <Heart className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" fill="currentColor" />
@@ -99,8 +96,6 @@ const Index = () => {
 
       {/* Decorative Elements */}
       <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-primary/10 to-transparent" />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
